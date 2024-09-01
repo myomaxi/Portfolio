@@ -1,0 +1,54 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, rgb(30, 32, 30), rgb(60, 61, 55));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for centering content */
+.container {
+    perspective: 1000px;
+}
+
+/* Content styling with 3D effect */
+.content {
+    background-color: rgb(236, 223, 204);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* 3D effect on hover */
+.content:hover {
+    transform: rotateY(10deg) rotateX(10deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile picture styling with 3D shadow */
+.profile-container {
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgb(105, 117, 101);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
